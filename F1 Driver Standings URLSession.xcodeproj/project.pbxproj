@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		189412482845047400093676 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189412472845047400093676 /* StringExtension.swift */; };
+		18941255284512A300093676 /* RootNaviagtionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18941254284512A300093676 /* RootNaviagtionController.swift */; };
 		18FE75DF2844C17F0044574F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE75DE2844C17F0044574F /* AppDelegate.swift */; };
 		18FE75E12844C17F0044574F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE75E02844C17F0044574F /* SceneDelegate.swift */; };
-		18FE75E32844C17F0044574F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE75E22844C17F0044574F /* ViewController.swift */; };
+		18FE75E32844C17F0044574F /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE75E22844C17F0044574F /* RootTableViewController.swift */; };
 		18FE75E62844C17F0044574F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FE75E42844C17F0044574F /* Main.storyboard */; };
 		18FE75E82844C18F0044574F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FE75E72844C18F0044574F /* Assets.xcassets */; };
 		18FE75EB2844C18F0044574F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FE75E92844C18F0044574F /* LaunchScreen.storyboard */; };
@@ -44,10 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		189412472845047400093676 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		18941254284512A300093676 /* RootNaviagtionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNaviagtionController.swift; sourceTree = "<group>"; };
 		18FE75DB2844C17F0044574F /* F1 Driver Standings URLSession.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "F1 Driver Standings URLSession.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FE75DE2844C17F0044574F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18FE75E02844C17F0044574F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		18FE75E22844C17F0044574F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18FE75E22844C17F0044574F /* RootTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
 		18FE75E52844C17F0044574F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18FE75E72844C18F0044574F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18FE75EA2844C18F0044574F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,6 +98,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		189412452845042A00093676 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				189412462845044500093676 /* Apple */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		189412462845044500093676 /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				189412472845047400093676 /* StringExtension.swift */,
+			);
+			path = Apple;
+			sourceTree = "<group>";
+		};
+		1894124F2845049700093676 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				18FE75E42844C17F0044574F /* Main.storyboard */,
+				18FE75E92844C18F0044574F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		18941250284504BA00093676 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				18FE75E22844C17F0044574F /* RootTableViewController.swift */,
+				18941254284512A300093676 /* RootNaviagtionController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		18FE75D22844C17F0044574F = {
 			isa = PBXGroup;
 			children = (
@@ -117,16 +155,16 @@
 		18FE75DD2844C17F0044574F /* F1 Driver Standings URLSession */ = {
 			isa = PBXGroup;
 			children = (
+				18941250284504BA00093676 /* ViewControllers */,
+				1894124F2845049700093676 /* Storyboards */,
+				189412452845042A00093676 /* Extensions */,
 				18FE76492844CF220044574F /* ViewModel */,
 				18FE76232844C3F80044574F /* Model */,
 				18FE761A2844C2D30044574F /* Repositories */,
 				18FE76112844C1ED0044574F /* Networking */,
 				18FE75DE2844C17F0044574F /* AppDelegate.swift */,
 				18FE75E02844C17F0044574F /* SceneDelegate.swift */,
-				18FE75E22844C17F0044574F /* ViewController.swift */,
-				18FE75E42844C17F0044574F /* Main.storyboard */,
 				18FE75E72844C18F0044574F /* Assets.xcassets */,
-				18FE75E92844C18F0044574F /* LaunchScreen.storyboard */,
 				18FE75EC2844C18F0044574F /* Info.plist */,
 			);
 			path = "F1 Driver Standings URLSession";
@@ -320,14 +358,16 @@
 				18FE764B2844CF830044574F /* DriverStandingsViewModel.swift in Sources */,
 				18FE763B2844C9F90044574F /* F1APIService.swift in Sources */,
 				18FE76402844CAE50044574F /* StandingsListAPIResponse.swift in Sources */,
-				18FE75E32844C17F0044574F /* ViewController.swift in Sources */,
+				18FE75E32844C17F0044574F /* RootTableViewController.swift in Sources */,
 				18FE76132844C25F0044574F /* APIService.swift in Sources */,
 				18FE761F2844C3700044574F /* F1Service.swift in Sources */,
 				18FE762E2844C7030044574F /* StangingsList.swift in Sources */,
+				18941255284512A300093676 /* RootNaviagtionController.swift in Sources */,
 				18FE76362844C8400044574F /* F1Repository.swift in Sources */,
 				18FE75DF2844C17F0044574F /* AppDelegate.swift in Sources */,
 				18FE75E12844C17F0044574F /* SceneDelegate.swift in Sources */,
 				18FE76452844CBD40044574F /* Endpoint.swift in Sources */,
+				189412482845047400093676 /* StringExtension.swift in Sources */,
 				18FE76252844C4340044574F /* DriverStanding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

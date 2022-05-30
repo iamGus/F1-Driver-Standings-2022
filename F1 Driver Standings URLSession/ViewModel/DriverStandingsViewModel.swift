@@ -10,7 +10,7 @@ import Foundation
 class DriverStandingsViewModel {
     private var standing: StandingsList?
     private var driverStanding: [DriverStanding]? {
-        standing?.driverStandings.sorted { $0.position > $1.position }
+        standing?.driverStandings
     }
     var f1Repository: F1Repository
     
