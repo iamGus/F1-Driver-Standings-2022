@@ -12,7 +12,7 @@ class DriverStandingsViewModel {
     private var driverStanding: [DriverStanding]? {
         standing?.driverStandings
     }
-    var f1Repository: F1Repository
+    private var f1Repository: F1Repository
     
     init(f1Repository: F1Repository) {
         self.f1Repository = f1Repository
