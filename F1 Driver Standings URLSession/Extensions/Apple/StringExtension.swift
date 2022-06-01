@@ -8,6 +8,7 @@
 import Foundation
 
 extension String {
+    
     func localised(comment: String = "") -> String {
         return NSLocalizedString(self, comment: comment)
     }

@@ -65,7 +65,7 @@ extension APIService {
         
         return task
     }
-    /// Generic method to call decodingTask and see if data can be parsed, if it can then return JSON
+    /// Generic method to call decodingTask and see if data can be parsed, if it can then return Model
     func fetch<T: Decodable, Y: Decodable>(with request: URLRequest, responseType: Y.Type, decode: @escaping (Decodable) -> [T], completion: @escaping (Result<[T], APIError>) -> Void) {
         let task = decodingTask(with: request, decodingType: Y.self) { json, error in
             

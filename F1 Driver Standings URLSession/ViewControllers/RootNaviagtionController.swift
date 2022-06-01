@@ -22,9 +22,4 @@ class RootNaviagtionController: UINavigationController {
         }
   
     }
-    
-
-
-    
-
 }

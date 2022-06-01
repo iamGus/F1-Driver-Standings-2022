@@ -20,7 +20,7 @@ enum F1RepositoryError: Error {
         }
     }
     
-    //Readable description of error
+    // Readable description of error for user
     var errorDescription: String {
         switch self {
         case .noContent: return "Sorry no data could be retrieved"
@@ -36,7 +36,7 @@ class F1Repository {
         self.f1Service = f1Service
     }
     
-    /// Fetch all known rockets
+    /// Gets the latest set of Driver Standings
     func fetchCurrentDriverStandings(completion: @escaping (Result<StandingsList, F1RepositoryError>) -> ()) {
         f1Service.fetchCurrentDriverStandings { (result) in
             switch result {

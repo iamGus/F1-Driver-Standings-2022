@@ -43,3 +43,16 @@ struct DriverStanding: Codable {
         case constructors = "Constructors"
     }
 }
+
+// MARK: - Helper Extensions
+
+extension DriverStanding {
+    
+    var driverFullName: String {
+        "\(driver.givenName) \(driver.familyName)"
+    }
+    
+    var constructorsName: String? {
+        constructors.first?.name
+    }
+}

@@ -34,8 +34,8 @@ class RootTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StandingCell", for: indexPath)
         
         if let driverStanding = model?.driverStanding(at: indexPath.row) {
-            cell.textLabel?.text = driverStanding.driver.givenName.localised()
-            cell.detailTextLabel?.text = driverStanding.constructors.first?.name.localised()
+            cell.textLabel?.text = driverStanding.driverFullName
+            cell.detailTextLabel?.text = driverStanding.constructorsName
         }
         
         return cell
@@ -50,8 +50,9 @@ class RootTableViewController: UITableViewController {
     // MARK: Helpers
     
     private func refreshContent() {
+        
         guard let model = model else {
-            fatalError("There is no model for RootTableViewController") // We would fail more elegantly in a prod code
+            fatalError("There is no model for RootTableViewController") // We would fail more elegantly in prod code
         }
         
         model.refresh { [weak self] (errorMessage) in
@@ -64,7 +65,7 @@ class RootTableViewController: UITableViewController {
                     self.displayErrorToUser(message: errorMessage)
                 }
                 
-                self.title = model.seasonName()
+                self.title = model.seasonName()?.localised()
                 
                 self.tableView.reloadData()
             }
@@ -80,9 +81,9 @@ class RootTableViewController: UITableViewController {
         alert.addAction(.init(title: "Ok".localised(),
                               style: .default,
                               handler: nil))
-        alert.addAction(.init(title: "Try Again", style: .default, handler: { [weak self] _ in
+        alert.addAction(.init(title: "Try Again", style: .default) { [weak self] _ in
             self?.refreshContent()
-        }))
+        })
         
         present(alert, animated: true, completion: nil)
     }

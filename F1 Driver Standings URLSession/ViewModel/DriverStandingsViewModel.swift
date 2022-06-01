@@ -8,6 +8,7 @@
 import Foundation
 
 class DriverStandingsViewModel {
+    
     private var standing: StandingsList?
     private var driverStanding: [DriverStanding]? {
         standing?.driverStandings
@@ -18,12 +19,14 @@ class DriverStandingsViewModel {
         self.f1Repository = f1Repository
     }
     
-    /// Pulls the latest set of rockets
+    /// Gets the latest set of Driver Standings
     func refresh(completion: @escaping (_ errorMessage: String?) -> ()) {
+        
         f1Repository.fetchCurrentDriverStandings { result in
             switch result {
             case .failure(let error):
                 completion(error.errorDescription)
+                
             case .success(let standing):
                 self.standing = standing
                 completion(nil)
@@ -40,6 +43,7 @@ extension DriverStandingsViewModel {
     }
     
     func driverStanding(at index: Int) -> DriverStanding? {
+        
         guard index < driverStandingCount() else {
             return nil
         }

@@ -20,7 +20,7 @@ extension Endpoint {
     var urlComponents: URLComponents {
         var components = URLComponents(string: base)!
         components.path = path
-       // components.queryItems = queryItem
+        components.queryItems = queryItem
         
         return components
     }
@@ -34,20 +34,18 @@ extension Endpoint {
 }
 
 enum F1Endpoint {
-    /// A type that provides possible sort options for returned movie discovery search
     
     case currentDriverStandings
 }
 
 extension F1Endpoint: Endpoint {
     var base: String {
-    return "https://ergast.com"
+        return "https://ergast.com"
     }
     
     var path: String {
         switch self {
         case .currentDriverStandings: return "/api/f1/current/driverStandings.json"
-
         }
     }
     
